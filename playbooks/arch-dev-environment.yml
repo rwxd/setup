@@ -1,0 +1,40 @@
+- name: Apply dev-environment
+  hosts: localhost
+
+  tasks:
+    - name: Apply dev-environment role
+      include_role:
+        name: ansible-role-dev-environment
+      vars:
+        update: true
+        packages: true
+        dotfiles: true
+        zsh: true
+        tmux: true
+        pacman_packages:
+          - stow
+          - git
+          - zsh
+          - rsync
+          - rclone
+          - borgbackup
+          - keepassxc
+          - bitwarden
+          - pass
+          - vim
+          - neovim
+          - plantuml
+          - bridge-utils
+          - openbsd-netcat
+          - flameshot
+          - bind-tools
+          - i3-gaps
+          - i3status
+          - i3lock
+          - pavucontrol
+          - playerctl
+          - dmenu
+          - blueman
+        aur_packages: []
+        flatpak_packages:
+         - md.obsidian.Obsidian
