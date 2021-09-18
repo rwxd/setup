@@ -1,0 +1,10 @@
+- name: Apply dev-environment
+  hosts: localhost
+
+  tasks:
+    - name: Apply dev-environment role
+      include_role:
+        name: ansible-role-dev-environment
+      vars:
+       update: true
+       packages: true
