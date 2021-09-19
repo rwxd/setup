@@ -22,6 +22,7 @@
           - bitwarden
           - pass
           - vim
+          - fzf
           - neovim
           - plantuml
           - bridge-utils
