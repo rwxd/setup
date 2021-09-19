@@ -37,6 +37,7 @@
           - playerctl
           - dmenu
           - blueman
+          - flatpak
         aur_packages: []
         flatpak_packages:
          - md.obsidian.Obsidian
