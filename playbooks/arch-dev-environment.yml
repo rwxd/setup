@@ -18,6 +18,7 @@
           - rsync
           - rclone
           - borgbackup
+          - yay
           - keepassxc
           - bitwarden
           - pass
