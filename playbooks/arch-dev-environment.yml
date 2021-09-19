@@ -36,6 +36,7 @@
           - pavucontrol
           - playerctl
           - dmenu
+          - rofi
           - blueman
           - flatpak
         aur_packages: []
