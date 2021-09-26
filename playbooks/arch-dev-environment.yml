@@ -39,8 +39,9 @@
           - rofi
           - blueman
           - flatpak
+          - dunst
         aur_packages:
           - spicetify-cli
           - alacritty-git
         flatpak_packages:
-         - md.obsidian.Obsidian
+          - md.obsidian.Obsidian
