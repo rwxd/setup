@@ -1,0 +1,13 @@
+---
+- name: ensure that neovim is installed
+  ansible.builtin.package:
+    name: neovim
+    state: present
+  become: true
+
+- name: ensure that nodejs is installed
+  ansible.builtin.package:
+    name: nodejs
+    state: present
+  become: true
+

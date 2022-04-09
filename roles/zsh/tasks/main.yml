@@ -1,0 +1,53 @@
+---
+- name: ensure that zsh is installed
+  ansible.builtin.package:
+    name: zsh
+    state: present
+  become: true
+
+- name: get current user
+  command: whoami
+  changed_when: false
+  become: false
+  register: whoami
+
+- name: set default shell to zsh
+  user:
+    name: "{{ whoami.stdout }}"
+    shell: "/bin/zsh"
+
+- name: get oh-my-zsh
+  git:
+    repo: https://github.com/ohmyzsh/ohmyzsh.git
+    dest: "{{ lookup('env','HOME') }}/.oh-my-zsh"
+    update: true
+    version: master
+
+- name: get zsh-autosuggestions
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions.git
+    dest: "{{ lookup('env','HOME') }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+    update: true
+    version: master
+
+- name: get zsh-completions
+  git:
+    repo: https://github.com/zsh-users/zsh-completions.git
+    dest: "{{ lookup('env','HOME') }}/.oh-my-zsh/custom/plugins/zsh-completions"
+    update: true
+    version: master
+
+- name: get zsh-syntax-highlighting
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: "{{ lookup('env','HOME') }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+    update: true
+    version: master
+
+- name: get powerlevel10k
+  git:
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: "{{ lookup('env','HOME') }}/.oh-my-zsh/custom/themes/powerlevel10k"
+    update: true
+    version: master
+

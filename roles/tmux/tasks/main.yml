@@ -1,0 +1,13 @@
+---
+- name: ensure that tmux is installed
+  ansible.builtin.package:
+    name: tmux
+    state: present
+  become: true
+
+- name: get the tmux plugin manager
+  git:
+    repo: https://github.com/tmux-plugins/tpm.git
+    dest: "{{ lookup('env','HOME') }}/.tmux/plugins/tpm"
+    version: master
+    update: true

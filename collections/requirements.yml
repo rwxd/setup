@@ -1,4 +1,5 @@
 ---
 collections:
   - community.general
-  - kewlfft.aur
+  - name: kewlfft.aur
+    version: v0.10.0
