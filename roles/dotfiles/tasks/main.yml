@@ -1,0 +1,14 @@
+---
+- name: get dotfiles repository
+  git:
+    repo: "git@github.com:rwxd/.dotfiles.git"
+    dest: "{{ lookup('env','HOME') }}/.dotfiles"
+    version: main
+    update: true
+    recursive: false
+
+- name: make sure stow is installed
+  ansible.builtin.package:
+    name: stow
+    state: present
+  become: true
