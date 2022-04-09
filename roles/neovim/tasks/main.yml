@@ -1,13 +1,9 @@
 ---
-- name: ensure that neovim is installed
+- name: ensure that neovim and required packages are installed
   ansible.builtin.package:
-    name: neovim
+    name:
+      - neovim
+      - nodejs
+      - fzf
     state: present
   become: true
-
-- name: ensure that nodejs is installed
-  ansible.builtin.package:
-    name: nodejs
-    state: present
-  become: true
-

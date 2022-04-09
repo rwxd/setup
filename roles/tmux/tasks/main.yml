@@ -11,3 +11,7 @@
     dest: "{{ lookup('env','HOME') }}/.tmux/plugins/tpm"
     version: master
     update: true
+
+- name: ensure that tmuxp is installed
+  ansible.builtin.pip:
+    name: tmuxp

@@ -7,7 +7,7 @@
     update: true
     recursive: false
 
-- name: make sure stow is installed
+- name: ensure that stow is installed
   ansible.builtin.package:
     name: stow
     state: present

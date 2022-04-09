@@ -1,7 +1,9 @@
 ---
-- name: ensure that zsh is installed
+- name: ensure that zsh and required packages are installed
   ansible.builtin.package:
-    name: zsh
+    name:
+      - zsh
+      - fzf
     state: present
   become: true
 

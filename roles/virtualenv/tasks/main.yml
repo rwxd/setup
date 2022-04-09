@@ -1,0 +1,4 @@
+---
+- name: ensure that virtualenv is installed
+  pip:
+    name: virtualenv
