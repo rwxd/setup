@@ -1,0 +1,10 @@
+---
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+_extends: gh-templates:.github/common-settings.yml
+
+repository:
+  name: "setup"
+  description: "Playbooks to configure systems"
+  homepage: "https://rwxd.github.io/systems/"
+  topics: "setup, ansible"
