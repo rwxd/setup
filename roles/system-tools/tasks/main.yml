@@ -1,14 +1,14 @@
 ---
-- name: ensure that system-tools are installed
+- name: Install system-tools
   ansible.builtin.package:
     name:
       - vim
       - git
       - htop
-    state: present
+    state: latest
   become: true
 
-- name: install pacman packages
+- name: Install pacman packages
   community.general.pacman:
     name:
       - dnsutils
@@ -16,8 +16,7 @@
   become: true
   when: ansible_distribution in ["Archlinux"]
 
-
-- name: install apt packages
+- name: Install apt packages
   apt:
     name:
       - dnsuilts

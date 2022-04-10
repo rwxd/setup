@@ -1,10 +1,11 @@
 ---
-- name: ensure that neovim and required packages are installed
+- name: install neovim and required packages
   ansible.builtin.package:
     name:
       - neovim
       - nodejs
       - yarn
       - fzf
+      - ripgrep
     state: present
   become: true

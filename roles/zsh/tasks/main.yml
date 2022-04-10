@@ -1,5 +1,5 @@
 ---
-- name: ensure that zsh and required packages are installed
+- name: Install zsh and required packages
   ansible.builtin.package:
     name:
       - zsh
@@ -7,49 +7,48 @@
     state: present
   become: true
 
-- name: get current user
+- name: Get current user
   command: whoami
   changed_when: false
   become: false
   register: whoami
 
-- name: set default shell to zsh
+- name: Set default shell to zsh
   user:
     name: "{{ whoami.stdout }}"
     shell: "/bin/zsh"
 
-- name: get oh-my-zsh
+- name: Get oh-my-zsh
   git:
     repo: https://github.com/ohmyzsh/ohmyzsh.git
     dest: "{{ lookup('env','HOME') }}/.oh-my-zsh"
     update: true
     version: master
 
-- name: get zsh-autosuggestions
+- name: Get zsh-autosuggestions
   git:
     repo: https://github.com/zsh-users/zsh-autosuggestions.git
     dest: "{{ lookup('env','HOME') }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
     update: true
     version: master
 
-- name: get zsh-completions
+- name: Get zsh-completions
   git:
     repo: https://github.com/zsh-users/zsh-completions.git
     dest: "{{ lookup('env','HOME') }}/.oh-my-zsh/custom/plugins/zsh-completions"
     update: true
     version: master
 
-- name: get zsh-syntax-highlighting
+- name: Get zsh-syntax-highlighting
   git:
     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
     dest: "{{ lookup('env','HOME') }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
     update: true
     version: master
 
-- name: get powerlevel10k
+- name: Get powerlevel10k
   git:
     repo: https://github.com/romkatv/powerlevel10k.git
     dest: "{{ lookup('env','HOME') }}/.oh-my-zsh/custom/themes/powerlevel10k"
     update: true
     version: master
-

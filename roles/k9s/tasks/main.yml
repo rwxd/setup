@@ -1,5 +1,5 @@
 ---
-- name: ensure k9s is installed
+- name: Install k9s
   ansible.builtin.package:
     name: k9s
     state: latest

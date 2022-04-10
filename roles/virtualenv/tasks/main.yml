@@ -1,4 +1,5 @@
 ---
-- name: ensure that virtualenv is installed
+- name: Install virtualenv
   pip:
     name: virtualenv
+    state: latest
