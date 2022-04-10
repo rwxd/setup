@@ -1,7 +1,7 @@
 - name: Apply dev-environment
   hosts: localhost
   tasks:
-    - name: include roles
+    - name: Include roles
       include_role:
         name: "{{ item }}"
       with_items:

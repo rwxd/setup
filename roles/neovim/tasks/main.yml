@@ -1,5 +1,5 @@
 ---
-- name: install neovim and required packages
+- name: Install neovim and required packages
   ansible.builtin.package:
     name:
       - neovim

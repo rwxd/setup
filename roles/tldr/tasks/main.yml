@@ -1,5 +1,5 @@
 ---
-- name: install newest tldr with pip
+- name: Install tldr
   pip:
     name: tldr
     state: latest
