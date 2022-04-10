@@ -6,6 +6,8 @@
       - git
       - htop
       - jq
+      - make
+      - yq
     state: latest
   become: true
 

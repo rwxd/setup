@@ -1,0 +1,6 @@
+---
+- name: Install nmap
+  ansible.builtin.package:
+    name: nmap
+    state: latest
+  become: true

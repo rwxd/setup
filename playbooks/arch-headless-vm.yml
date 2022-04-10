@@ -1,0 +1,21 @@
+---
+- name: Apply dev-environment
+  hosts: localhost
+  tasks:
+    - name: Include roles
+      include_role:
+        name: "{{ item }}"
+      with_items:
+        - system-tools
+        - zsh
+        - neovim
+        - tmux
+        - dotfiles
+        - virtualenv
+        - tldr
+        - bat
+        - go
+        - terraform
+        - kubectl
+        - k9s
+        - nmap
