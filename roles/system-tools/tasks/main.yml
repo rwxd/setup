@@ -1,0 +1,27 @@
+---
+- name: ensure that system-tools are installed
+  ansible.builtin.package:
+    name:
+      - vim
+      - git
+      - htop
+    state: present
+  become: true
+
+- name: install pacman packages
+  community.general.pacman:
+    name:
+      - dnsutils
+    state: present
+  become: true
+  when: ansible_distribution in ["Archlinux"]
+
+
+- name: install apt packages
+  apt:
+    name:
+      - dnsuilts
+    cache_valid_time: 600
+    state: present
+  become: true
+  when: ansible_distribution in ["Debian", "Ubuntu"]

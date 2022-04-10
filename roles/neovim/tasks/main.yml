@@ -4,6 +4,7 @@
     name:
       - neovim
       - nodejs
+      - yarn
       - fzf
     state: present
   become: true

@@ -1,48 +1,13 @@
 - name: Apply dev-environment
   hosts: localhost
-
   tasks:
-    - name: Apply dev-environment role
+    - name: include roles
       include_role:
-        name: ansible-role-dev-environment
-      vars:
-        update: true
-        packages: true
-        dotfiles: true
-        zsh: true
-        tmux: true
-        pacman_packages:
-          - stow
-          - git
-          - zsh
-          - rsync
-          - rclone
-          - borgbackup
-          - yay
-          - keepassxc
-          - bitwarden
-          - pass
-          - vim
-          - fzf
-          - neovim
-          - plantuml
-          - bridge-utils
-          - openbsd-netcat
-          - flameshot
-          - bind-tools
-          - i3-gaps
-          - i3status
-          - i3lock
-          - pavucontrol
-          - playerctl
-          - dmenu
-          - rofi
-          - blueman
-          - flatpak
-          - dunst
-          - lazygit
-        aur_packages:
-          - spicetify-cli
-          - alacritty-git
-        flatpak_packages:
-          - md.obsidian.Obsidian
+        name: "{{ item }}"
+      with_items:
+        - system-tools
+        - zsh
+        - neovim
+        - tmux
+        - dotfiles
+        - virtualenv

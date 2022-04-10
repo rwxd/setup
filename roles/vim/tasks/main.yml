@@ -1,6 +1,0 @@
----
-- name: ensure that vim is installed
-  ansible.builtin.package:
-    name: vim
-    state: present
-  become: true
