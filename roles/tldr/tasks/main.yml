@@ -1,0 +1,5 @@
+---
+- name: install newest tldr with pip
+  pip:
+    name: tldr
+    state: latest

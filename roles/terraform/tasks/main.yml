@@ -1,0 +1,6 @@
+---
+- name: ensure terraform is installed
+  ansible.builtin.package:
+    name: terraform
+    state: latest
+  become: true

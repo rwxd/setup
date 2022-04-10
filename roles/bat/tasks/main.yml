@@ -1,0 +1,6 @@
+---
+- name: ensure bat is installed
+  ansible.builtin.package:
+    name: bat
+    state: latest
+  become: true

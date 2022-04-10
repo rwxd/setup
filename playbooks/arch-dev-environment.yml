@@ -11,3 +11,9 @@
         - tmux
         - dotfiles
         - virtualenv
+        - tldr
+        - bat
+        - go
+        - terraform
+        - kubectl
+        - k9s
