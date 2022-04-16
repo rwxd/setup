@@ -1,0 +1,7 @@
+---
+- name: Upgrade pacman packages
+  community.general.pacman:
+    update_cache: true
+    upgrade: true
+  become: true
+  when: ansible_distribution in ["Archlinux"]

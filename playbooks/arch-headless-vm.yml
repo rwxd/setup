@@ -6,6 +6,7 @@
       include_role:
         name: "{{ item }}"
       with_items:
+        - update
         - system-tools
         - aur
         - zsh
@@ -21,3 +22,5 @@
         - k9s
         - nmap
         - trivy
+        - docker
+        # - upgrade

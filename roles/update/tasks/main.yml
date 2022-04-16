@@ -1,0 +1,6 @@
+---
+- name: Update Pacman
+  community.general.pacman:
+    update_cache: true
+  become: true
+  when: ansible_distribution in ["Archlinux"]
