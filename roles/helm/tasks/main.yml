@@ -1,0 +1,6 @@
+---
+- name: Install helm
+  ansible.builtin.package:
+    name: helm
+    state: latest
+  become: true
