@@ -4,7 +4,7 @@
     repo: "git@github.com:rwxd/.dotfiles.git"
     dest: "{{ lookup('env','HOME') }}/.dotfiles"
     version: main
-    update: true
+    update: false
     recursive: false
 
 - name: Install stow
