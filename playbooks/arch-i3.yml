@@ -1,0 +1,29 @@
+---
+- name: Apply dev-environment
+  hosts: localhost
+  tasks:
+    - name: Include roles
+      include_role:
+        name: "{{ item }}"
+      with_items:
+        - update
+        - system-tools
+        - aur
+        - zsh
+        - neovim
+        - tmux
+        - dotfiles
+        - virtualenv
+        - tldr
+        - bat
+        - go
+        - terraform
+        - kubectl
+        - k9s
+        - nmap
+        - trivy
+        - docker
+        - helm
+        - i3
+        - rofi
+        - feh

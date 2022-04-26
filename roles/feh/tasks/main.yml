@@ -1,0 +1,6 @@
+---
+- name: Install feh
+  ansible.builtin.package:
+    name: feh
+    state: latest
+  become: true
