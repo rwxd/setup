@@ -1,0 +1,6 @@
+---
+- name: Install libreoffice
+  ansible.builtin.package:
+    name: libreoffice-fresh
+    state: latest
+  become: true

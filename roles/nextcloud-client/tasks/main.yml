@@ -1,0 +1,7 @@
+---
+- name: Install nextcloud-client
+  ansible.builtin.package:
+    name:
+      - nextcloud-client
+    state: present
+  become: true

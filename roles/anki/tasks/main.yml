@@ -1,0 +1,7 @@
+---
+- name: Install anki
+  kewlfft.aur.aur:
+    name: "anki"
+    state: latest
+    use: yay
+  when: ansible_distribution in ["Archlinux"]

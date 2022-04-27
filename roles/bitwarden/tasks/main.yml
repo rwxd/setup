@@ -1,0 +1,8 @@
+---
+- name: Install bitwarden + cli
+  ansible.builtin.package:
+    name:
+      - bitwarden
+      - bitwarden-cli
+    state: latest
+  become: true
