@@ -12,3 +12,13 @@
     name: stow
     state: present
   become: true
+
+- name: Create bin directory
+  file:
+    path: "~/.local/bin/"
+    state: directory
+
+- name: Create coc extensions directory
+  file:
+    path: "~/.coc/extensions/"
+    state: directory

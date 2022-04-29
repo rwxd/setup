@@ -1,0 +1,6 @@
+---
+- name: Install spotify through flatpak
+  community.general.flatpak:
+    name: "spotify"
+    state: present
+  when: ansible_distribution in ["Archlinux"]

@@ -8,6 +8,8 @@
       with_items:
         - update
         - system-tools
+        - flatpak
+        - containerlab
         - aur
         - zsh
         - neovim
@@ -34,3 +36,4 @@
         - steam-manjaro
         - bitwarden
         - pass
+        - spotify

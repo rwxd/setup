@@ -17,6 +17,7 @@
   user:
     name: "{{ whoami.stdout }}"
     shell: "/bin/zsh"
+  become: true
 
 - name: Get oh-my-zsh
   git:
