@@ -1,0 +1,6 @@
+---
+- name: Install wl-clipboard
+  ansible.builtin.package:
+    name: wl-clipboard
+    state: latest
+  become: true

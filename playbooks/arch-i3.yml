@@ -13,6 +13,7 @@
         - aur
         - zsh
         - neovim
+        - wl-clipboard
         - alacritty
         - tmux
         - dotfiles

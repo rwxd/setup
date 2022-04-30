@@ -3,17 +3,20 @@
   shell: >
     curl -s https://github.com/srl-labs/containerlab/releases/latest | sed -e 's/.*tag\/v\(.*\)\".*/\1/'
   register: containerlab_github_version_output
+  changed_when: false
 
 - name: Check if containerlab is installed
   shell: "which containerlab"
   register: containerlab_installed
   ignore_errors: true
+  changed_when: false
 
 - name: Get current containerlab version
   shell: >
     containerlab version | grep "version:" | grep -Po "\d+\.\d+\.\d+"
   register: containerlab_version_output
   when: containerlab_installed.rc == 0
+  changed_when: false
 
 - name: Set new containerlab version fact
   set_fact:
