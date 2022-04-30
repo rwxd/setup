@@ -1,0 +1,6 @@
+---
+- name: Install discord
+  ansible.builtin.package:
+    name: discord
+    state: present
+  become: true

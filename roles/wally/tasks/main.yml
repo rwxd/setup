@@ -1,0 +1,6 @@
+---
+- name: Install zsa-wally
+  ansible.builtin.package:
+    name: zsa-wally
+    state: latest
+  become: true
