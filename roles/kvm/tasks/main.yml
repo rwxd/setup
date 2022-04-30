@@ -1,0 +1,22 @@
+---
+- name: Install kvm
+  ansible.builtin.package:
+    name:
+      - qemu
+      - virt-manager
+    state: present
+  become: true
+
+- name: Enable libvirtd service
+  ansible.builtin.systemd:
+    name: libvirtd
+    enabled: true
+    state: started
+  become: true
+
+- name: Add myself to libvirt group
+  ansible.builtin.user:
+    append: true
+    groups: libvirt
+    name: "{{ ansible_env['USER'] }}"
+  become: true

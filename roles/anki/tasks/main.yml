@@ -1,7 +1,5 @@
 ---
-- name: Install anki
-  kewlfft.aur.aur:
-    name: "anki-official-binary-bundle"
-    state: latest
-    use: yay
-  when: ansible_distribution in ["Archlinux"]
+- name: Install anki through flatpak
+  community.general.flatpak:
+    name: "net.ankiweb.Anki"
+    state: present

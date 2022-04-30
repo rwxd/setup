@@ -22,3 +22,8 @@
   file:
     path: "~/.coc/extensions/"
     state: directory
+
+- name: Create gpg directory
+  file:
+    path: "~/.gpg"
+    state: directory
