@@ -1,0 +1,7 @@
+---
+- name: Install pwgen
+  ansible.builtin.package:
+    name:
+      - pwgen
+    state: latest
+  become: true
