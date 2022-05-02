@@ -1,0 +1,6 @@
+---
+- name: Install android-tools
+  ansible.builtin.package:
+    name: android-tools
+    state: latest
+  become: true
