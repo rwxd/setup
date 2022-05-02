@@ -1,0 +1,6 @@
+---
+- name: Install vlc
+  ansible.builtin.package:
+    name: vlc
+    state: latest
+  become: true

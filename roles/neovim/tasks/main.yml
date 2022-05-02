@@ -7,5 +7,5 @@
       - yarn
       - fzf
       - ripgrep
-    state: present
+    state: latest
   become: true
