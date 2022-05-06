@@ -9,7 +9,7 @@
         - update
         - system-tools
         - flatpak
-        - containerlab
+        # - containerlab
         - aur
         - zsh
         - neovim
@@ -46,3 +46,4 @@
         - android-tools
         - flameshot
         - vlc
+        - element
