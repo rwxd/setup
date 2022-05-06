@@ -47,3 +47,5 @@
         - flameshot
         - vlc
         - element
+        - git-crypt
+        - nix

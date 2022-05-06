@@ -25,3 +25,4 @@
         - docker
         - helm
         - pwgen
+        - git-crypt
