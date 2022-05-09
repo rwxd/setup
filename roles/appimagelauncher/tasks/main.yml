@@ -1,0 +1,6 @@
+---
+- name: Install appimagelauncher
+  ansible.builtin.package:
+    name: appimagelauncher
+    state: latest
+  become: true

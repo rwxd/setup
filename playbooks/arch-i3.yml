@@ -34,6 +34,8 @@
         - anki
         - nextcloud-client
         - obsidian
+        - trilium
+        # - joplin
         - libreoffice
         - steam-manjaro
         - bitwarden
@@ -49,3 +51,6 @@
         - element
         - git-crypt
         - nix
+        - hugo
+        - appimagelauncher
+        - firejail

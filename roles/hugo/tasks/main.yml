@@ -1,0 +1,6 @@
+---
+- name: Install hugo
+  ansible.builtin.package:
+    name: hugo
+    state: latest
+  become: true

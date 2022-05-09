@@ -1,0 +1,14 @@
+---
+- name: Install joplin
+  kewlfft.aur.aur:
+    name: "joplin"
+    state: latest
+    use: yay
+  when: ansible_distribution in ["Archlinux"]
+
+- name: Install joplin-desktop
+  kewlfft.aur.aur:
+    name: "joplin-desktop"
+    state: latest
+    use: yay
+  when: ansible_distribution in ["Archlinux"]

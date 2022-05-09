@@ -1,0 +1,8 @@
+---
+- name: Install firejail and firetools
+  ansible.builtin.package:
+    name:
+      - firejail
+      - firetools
+    state: latest
+  become: true
