@@ -14,6 +14,7 @@
         - zsh
         - neovim
         - wl-clipboard
+        - xclip
         - alacritty
         - tmux
         - dotfiles
@@ -25,7 +26,7 @@
         - kubectl
         - k9s
         - nmap
-        - trivy
+        # - trivy
         - docker
         - helm
         - i3
@@ -54,3 +55,6 @@
         - hugo
         - appimagelauncher
         - firejail
+        # - flutter
+        - tor
+        - bfg

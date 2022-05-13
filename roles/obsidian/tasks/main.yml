@@ -1,7 +1,7 @@
 ---
-- name: Install obsidian
-  ansible.builtin.package:
+- name: Install Obsidian
+  community.general.flatpak:
     name:
-      - obsidian
+      - md.obsidian.Obsidian
+      - Flatseal
     state: present
-  become: true
