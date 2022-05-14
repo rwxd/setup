@@ -1,0 +1,6 @@
+---
+- name: Install kitty
+  ansible.builtin.package:
+    name: kitty
+    state: latest
+  become: true

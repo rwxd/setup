@@ -15,7 +15,7 @@
         - neovim
         - wl-clipboard
         - xclip
-        - alacritty
+        - kitty
         - tmux
         - dotfiles
         - virtualenv
@@ -35,10 +35,10 @@
         - anki
         - nextcloud-client
         - obsidian
-        - trilium
         # - joplin
         - libreoffice
         - steam-manjaro
+        - lutris
         - bitwarden
         - pass
         - spotify

@@ -1,0 +1,9 @@
+---
+- name: Install lutris & wine
+  ansible.builtin.package:
+    name:
+      - lutris
+      - wine
+      - winetricks
+    state: latest
+  become: true
