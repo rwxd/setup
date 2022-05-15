@@ -1,0 +1,6 @@
+---
+- name: Install blueman
+  ansible.builtin.package:
+    name: blueman
+    state: latest
+  become: true

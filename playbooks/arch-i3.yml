@@ -10,6 +10,9 @@
         - system-tools
         - flatpak
         # - containerlab
+        - bluez
+        - blueman
+        - pavucontrol
         - aur
         - zsh
         - neovim
@@ -58,3 +61,4 @@
         # - flutter
         - tor
         - bfg
+        - todoist

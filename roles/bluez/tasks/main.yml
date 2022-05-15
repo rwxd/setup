@@ -1,0 +1,8 @@
+---
+- name: Install bluez & bluez-utils
+  ansible.builtin.package:
+    name:
+      - bluez
+      - bluez-utils
+    state: latest
+  become: true
