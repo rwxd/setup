@@ -19,6 +19,7 @@
         - wl-clipboard
         - xclip
         - kitty
+        - plantuml
         - dunst
         - tmux
         - dotfiles
