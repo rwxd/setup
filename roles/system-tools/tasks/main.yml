@@ -9,6 +9,7 @@
       - make
       - yq
       - sshpass
+      - gnupg
     state: latest
   become: true
 

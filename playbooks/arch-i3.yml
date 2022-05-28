@@ -19,9 +19,12 @@
         - wl-clipboard
         - xclip
         - kitty
+        - dunst
         - tmux
         - dotfiles
         - virtualenv
+        - protonvpn
+        - wireshark
         - tldr
         - bat
         - go

@@ -1,6 +1,6 @@
 ---
-- name: Install alacritty
+- name: Install dunst
   ansible.builtin.package:
-    name: alacritty
+    name: dunst
     state: latest
   become: true
