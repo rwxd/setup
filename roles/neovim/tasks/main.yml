@@ -9,3 +9,42 @@
       - ripgrep
     state: latest
   become: true
+
+- name: Install lsp packages
+  ansible.builtin.package:
+    name:
+      - gopls
+    state: latest
+  become: true
+
+- name: Get the current username
+  ansible.builtin.command:
+    cmd: whoami
+  register: username_on_the_host
+  delegate_to: localhost
+  when: username_on_the_host is not defined
+  become: false
+
+- name: Create venv directory
+  ansible.builtin.file:
+    path: ~/.venvs/
+    state: directory
+    mode: 0750
+    owner: "{{ username_on_the_host.stdout }}"
+    group: "{{ username_on_the_host.stdout }}"
+
+- name: Install neovim python package
+  ansible.builtin.pip:
+    name: neovim
+    virtualenv: "{{ item }}"
+  with_items:
+    - "~/.venvs/neovim2/"
+    - "~/.venvs/neovim3/"
+
+- name: Install black
+  ansible.builtin.pip:
+    name: black
+    virtualenv: "{{ item }}"
+  with_items:
+    - "~/.venvs/neovim2/"
+    - "~/.venvs/neovim3/"
