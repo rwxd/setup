@@ -27,3 +27,8 @@
   file:
     path: "~/.gpg"
     state: directory
+
+- name: Create k9s config directory
+  file:
+    path: "~/.config/k9s"
+    state: directory
