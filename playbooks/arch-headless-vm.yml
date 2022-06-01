@@ -26,3 +26,4 @@
         - helm
         - pwgen
         - git-crypt
+        - hadolint

@@ -20,6 +20,7 @@
         - xclip
         - kitty
         - plantuml
+        - hadolint
         - dunst
         - tmux
         - dotfiles
