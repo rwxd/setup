@@ -1,9 +1,2 @@
-roles:
-  - src: git@github.com:rwxd/ansible-role-dev-environment.git
-    scm: git
-
-  - src: git@github.com:rwxd/ansible-role-alacritty.git
-    scm: git
-
-  - src: git@github.com:rwxd/ansible-role-borg-remote-backup.git
-    scm: git
+---
+roles: []
