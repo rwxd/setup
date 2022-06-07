@@ -1,0 +1,6 @@
+---
+- name: Install brave-browser
+  ansible.builtin.package:
+    name: brave-browser
+    state: latest
+  become: true

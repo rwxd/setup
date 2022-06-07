@@ -1,0 +1,14 @@
+---
+- name: Install wireguard-tools
+  ansible.builtin.package:
+    name: wireguard-tools
+    state: latest
+  become: true
+
+- name: Create wireguard-configs directory
+  file:
+    path: "~/.wireguard-configs/"
+    state: directory
+    mode: 0770
+  become: false
+
