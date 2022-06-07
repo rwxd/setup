@@ -5,6 +5,7 @@
       - neovim
       - nodejs
       - yarn
+      - npm
       - fzf
       - ripgrep
       - libgccjit
