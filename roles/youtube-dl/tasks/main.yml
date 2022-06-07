@@ -1,6 +1,6 @@
 ---
 - name: Install youtube-dl
   ansible.builtin.package:
-    name: yotube-dl
+    name: youtube-dl
     state: latest
   become: true
