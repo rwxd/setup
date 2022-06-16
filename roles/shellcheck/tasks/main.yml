@@ -1,0 +1,6 @@
+---
+- name: Install shellcheck
+  ansible.builtin.package:
+    name: shellcheck
+    state: latest
+  become: true

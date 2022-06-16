@@ -1,0 +1,6 @@
+---
+- name: Install shfmt
+  ansible.builtin.package:
+    name: shfmt
+    state: latest
+  become: true

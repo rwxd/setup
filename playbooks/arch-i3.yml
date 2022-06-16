@@ -70,3 +70,5 @@
         - bfg
         - todoist
         - youtube-dl
+        - shfmt
+        - shellcheck

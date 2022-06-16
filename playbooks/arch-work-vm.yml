@@ -33,3 +33,5 @@
           - lazygit
           - bfg
           - plantuml
+          - shfmt
+          - shellcheck
