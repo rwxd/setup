@@ -1,6 +1,9 @@
 ---
 - name: Apply dev-environment
   hosts: localhost
+  vars:
+    podman_users:
+      fwrage: "100000:65536"
   tasks:
     - name: Include roles
       include_role:
@@ -10,6 +13,7 @@
         - system-tools
         - flatpak
         # - containerlab
+        - podman
         - bluez
         - blueman
         - pavucontrol
@@ -30,6 +34,7 @@
         - brave-browser
         - wireshark
         - tldr
+        # - kind
         - bat
         - go
         - terraform

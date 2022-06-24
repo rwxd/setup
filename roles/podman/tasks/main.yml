@@ -1,0 +1,30 @@
+---
+- name: Install podman
+  ansible.builtin.package:
+    name: podman
+    state: latest
+  become: true
+
+- name: Configure /etc/container/*.conf
+  ansible.builtin.template:
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+    backup: true
+  loop: []
+  become: true
+
+- name: Create /etc/subuid and /etc/subgid
+  ansible.builtin.template:
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+    owner: root
+    group: root
+    mode: "0644"
+    backup: true
+  loop:
+    - etc/subuid
+    - etc/subgid
+  become: true

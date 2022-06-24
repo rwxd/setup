@@ -27,3 +27,4 @@
         - pwgen
         - git-crypt
         - hadolint
+        - kind
