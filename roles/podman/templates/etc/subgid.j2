@@ -3,6 +3,6 @@
 lxd:100000:65535
 {% endif %}
 root:100000:65535
-{% for group, mapping in podman_users.items() %}
-{{ group }}:{{ mapping }}
+{% for item in podman_users %}
+{{ item.name }}:{{ item.mapping }}
 {% endfor %}

@@ -16,6 +16,18 @@
   loop: []
   become: true
 
+- name: Get current user
+  command: whoami
+  changed_when: false
+  become: false
+  register: whoami
+
+- name: Set podman users
+  set_fact:
+    podman_users:
+      - name: "{{ whoami.stdout }}"
+        mapping: "100000:65536"
+
 - name: Create /etc/subuid and /etc/subgid
   ansible.builtin.template:
     src: "{{ item }}.j2"

@@ -1,9 +1,6 @@
 ---
 - name: Apply dev-environment
   hosts: localhost
-  vars:
-    podman_users:
-      fwrage: "100000:65536"
   tasks:
     - name: Include roles
       include_role:
