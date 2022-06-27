@@ -6,10 +6,11 @@
       - git
       - htop
       - jq
-      - make
       - yq
+      - make
       - sshpass
       - gnupg
+      - net-tools
     state: latest
   become: true
 
