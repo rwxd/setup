@@ -2,6 +2,17 @@
 - name: Apply dev-environment
   hosts: localhost
   tasks:
+    - name: Get current user
+      ansible.builtin.command: whoami
+      changed_when: false
+      become: false
+      register: whoami
+
+    - name: Set sub_uid_users
+      ansible.builtin.set_fact:
+        subid_users:
+          - "{{ whoami.stdout }}"
+
     - name: Include roles
       include_role:
         name: "{{ item }}"
@@ -13,6 +24,7 @@
         - podman
         - bluez
         - blueman
+        - subuid_subgid
         - pavucontrol
         - aur
         - wireguard

@@ -1,4 +1,6 @@
 roles/ansible-role-*
+roles/ansible_role_*
+roles/subuid_subgid
 !roles/requirements.yml
 
 # Byte-compiled / optimized / DLL files

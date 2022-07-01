@@ -1,2 +1,6 @@
 ---
-roles: []
+roles:
+  - name: subuid_subgid
+    version: v1.0.2
+    src: git@github.com:rwxd/ansible_role_subuid_subgid.git
+    scm: git
