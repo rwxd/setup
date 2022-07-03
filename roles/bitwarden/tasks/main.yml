@@ -4,5 +4,5 @@
     name:
       - bitwarden
       - bitwarden-cli
-    state: latest
+    state: present
   become: true

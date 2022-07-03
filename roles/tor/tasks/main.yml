@@ -2,13 +2,13 @@
 - name: Install tor
   ansible.builtin.package:
     name: tor
-    state: latest
+    state: present
   become: true
 
 - name: Install tor-browser
   kewlfft.aur.aur:
     name: tor-browser
-    state: latest
+    state: present
     use: yay
   when: ansible_distribution in ["Archlinux"]
 

@@ -9,14 +9,14 @@
       - fzf
       - ripgrep
       - libgccjit
-    state: latest
+    state: present
   become: true
 
 - name: Install lsp packages
   ansible.builtin.package:
     name:
       - gopls
-    state: latest
+    state: present
   become: true
 
 - name: Get the current username

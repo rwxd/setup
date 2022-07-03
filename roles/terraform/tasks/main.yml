@@ -2,5 +2,5 @@
 - name: Install terraform
   ansible.builtin.package:
     name: terraform
-    state: latest
+    state: present
   become: true

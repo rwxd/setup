@@ -2,6 +2,6 @@
 - name: Install protonvpn
   kewlfft.aur.aur:
     name: protonvpn
-    state: latest
+    state: present
     use: yay
   when: ansible_distribution in ["Archlinux"]

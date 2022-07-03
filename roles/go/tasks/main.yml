@@ -2,5 +2,5 @@
 - name: Install go
   ansible.builtin.package:
     name: go
-    state: latest
+    state: present
   become: true

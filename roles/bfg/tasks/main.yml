@@ -2,6 +2,6 @@
 - name: Install bfg
   kewlfft.aur.aur:
     name: bfg
-    state: latest
+    state: present
     use: yay
   when: ansible_distribution in ["Archlinux"]

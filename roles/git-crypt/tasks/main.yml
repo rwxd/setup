@@ -2,5 +2,5 @@
 - name: Install git-crypt
   ansible.builtin.package:
     name: git-crypt
-    state: latest
+    state: present
   become: true

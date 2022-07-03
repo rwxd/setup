@@ -4,5 +4,5 @@
     name:
       - firejail
       - firetools
-    state: latest
+    state: present
   become: true

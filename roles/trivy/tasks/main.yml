@@ -2,6 +2,6 @@
 - name: Install trivy
   kewlfft.aur.aur:
     name: "trivy-bin"
-    state: latest
+    state: present
     use: yay
   when: ansible_distribution in ["Archlinux"]

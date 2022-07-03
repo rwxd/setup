@@ -3,7 +3,7 @@
   ansible.builtin.package:
     name:
       - flatpak
-    state: latest
+    state: present
   become: true
 
 - name: Install Flatseal

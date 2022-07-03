@@ -2,5 +2,5 @@
 - name: Install vlc
   ansible.builtin.package:
     name: vlc
-    state: latest
+    state: present
   become: true

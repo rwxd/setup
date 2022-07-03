@@ -4,5 +4,5 @@
     name:
       - bluez
       - bluez-utils
-    state: latest
+    state: present
   become: true

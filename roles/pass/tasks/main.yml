@@ -1,5 +1,5 @@
 - name: Install pass
   ansible.builtin.package:
     name: pass
-    state: latest
+    state: present
   become: true

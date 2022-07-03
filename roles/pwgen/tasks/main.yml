@@ -3,5 +3,5 @@
   ansible.builtin.package:
     name:
       - pwgen
-    state: latest
+    state: present
   become: true

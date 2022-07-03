@@ -2,6 +2,6 @@
 - name: Install virtualenv
   pip:
     name: virtualenv
-    state: latest
+    state: present
   vars:
     ansible_python_interpreter: /usr/bin/python3

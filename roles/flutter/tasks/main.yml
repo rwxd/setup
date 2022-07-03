@@ -2,7 +2,7 @@
 - name: Install flutter
   kewlfft.aur.aur:
     name: flutter
-    state: latest
+    state: present
     use: yay
   when: ansible_distribution in ["Archlinux"]
 
@@ -12,5 +12,5 @@
       - cmake
       - ninja
       - pkg-config
-    state: latest
+    state: present
   become: true

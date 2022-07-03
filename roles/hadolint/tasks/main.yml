@@ -2,6 +2,6 @@
 - name: Install hadolint
   kewlfft.aur.aur:
     name: hadolint-bin
-    state: latest
+    state: present
     use: yay
   when: ansible_distribution in ["Archlinux"]

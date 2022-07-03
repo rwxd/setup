@@ -2,7 +2,7 @@
 - name: Install podman
   ansible.builtin.package:
     name: podman
-    state: latest
+    state: present
   become: true
 
 - name: Configure /etc/container/*.conf

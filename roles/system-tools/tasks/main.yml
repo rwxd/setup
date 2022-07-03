@@ -11,7 +11,7 @@
       - sshpass
       - gnupg
       - net-tools
-    state: latest
+    state: present
   become: true
 
 - name: Install pacman packages

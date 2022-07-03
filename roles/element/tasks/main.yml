@@ -2,5 +2,5 @@
 - name: Install element
   ansible.builtin.package:
     name: element-desktop
-    state: latest
+    state: present
   become: true

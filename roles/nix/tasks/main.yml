@@ -2,5 +2,5 @@
 - name: Install nix
   ansible.builtin.package:
     name: nix
-    state: latest
+    state: present
   become: true

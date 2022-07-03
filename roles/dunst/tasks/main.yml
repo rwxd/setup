@@ -2,5 +2,5 @@
 - name: Install dunst
   ansible.builtin.package:
     name: dunst
-    state: latest
+    state: present
   become: true

@@ -2,5 +2,5 @@
 - name: Install rofi
   ansible.builtin.package:
     name: rofi
-    state: latest
+    state: present
   become: true

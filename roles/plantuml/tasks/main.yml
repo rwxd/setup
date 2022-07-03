@@ -2,5 +2,5 @@
 - name: Install plantuml
   ansible.builtin.package:
     name: plantuml
-    state: latest
+    state: present
   become: true

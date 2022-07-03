@@ -5,5 +5,5 @@
       - lutris
       - wine
       - winetricks
-    state: latest
+    state: present
   become: true

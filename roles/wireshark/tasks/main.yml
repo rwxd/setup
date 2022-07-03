@@ -4,5 +4,5 @@
     name:
       - wireshark-qt
       - wireshark-cli
-    state: latest
+    state: present
   become: true

@@ -2,6 +2,6 @@
 - name: Install trilium-bin
   kewlfft.aur.aur:
     name: "trilium-bin"
-    state: latest
+    state: present
     use: yay
   when: ansible_distribution in ["Archlinux"]

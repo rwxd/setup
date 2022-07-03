@@ -2,5 +2,5 @@
 - name: Install pavucontrol
   ansible.builtin.package:
     name: pavucontrol
-    state: latest
+    state: present
   become: true
