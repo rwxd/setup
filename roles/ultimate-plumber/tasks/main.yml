@@ -1,0 +1,6 @@
+---
+- name: Install ultimate plumber
+  ansible.builtin.package:
+    name: up
+    state: present
+  become: true

@@ -37,6 +37,7 @@
         - hadolint
         - dunst
         - tmux
+        - ultimate-plumber
         - dotfiles
         - virtualenv
         - protonvpn

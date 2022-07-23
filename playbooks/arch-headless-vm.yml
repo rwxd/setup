@@ -4,8 +4,7 @@
   tasks:
     - name: Get current user
       ansible.builtin.command: whoami
-      changed_when: false
-      become: false
+      changed_when: false become: false
       register: whoami
 
     - name: Set sub_uid_users
@@ -39,4 +38,5 @@
         - pwgen
         - git-crypt
         - hadolint
+        - ultimate-plumber
         # - kind
