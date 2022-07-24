@@ -1,0 +1,7 @@
+---
+- name: Install cryptomator
+  kewlfft.aur.aur:
+    name: cryptomator
+    state: present
+    use: yay
+  when: ansible_distribution in ["Archlinux"]
