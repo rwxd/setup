@@ -1,0 +1,6 @@
+---
+- name: Install sipcalc
+  ansible.builtin.package:
+    name: sipcalc
+    state: present
+  become: true

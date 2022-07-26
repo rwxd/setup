@@ -1,0 +1,8 @@
+---
+- name: Install pipenv
+  ansible.builtin.package:
+    name:
+      - python-pipenv
+      - python-pipenv-to-requirements
+    state: present
+  become: true

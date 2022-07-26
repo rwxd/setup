@@ -4,7 +4,8 @@
   tasks:
     - name: Get current user
       ansible.builtin.command: whoami
-      changed_when: false become: false
+      changed_when: false
+      become: false
       register: whoami
 
     - name: Set sub_uid_users
@@ -13,7 +14,7 @@
           - "{{ whoami.stdout }}"
 
     - name: Include roles
-      include_role:
+      ansible.builtin.include_role:
         name: "{{ item }}"
       with_items:
         - update
@@ -27,6 +28,7 @@
         - virtualenv
         - tldr
         - bat
+        - sipcalc
         - go
         - terraform
         - kubectl
@@ -39,4 +41,5 @@
         - git-crypt
         - hadolint
         - ultimate-plumber
+        - pipenv
         # - kind

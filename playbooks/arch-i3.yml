@@ -14,7 +14,7 @@
           - "{{ whoami.stdout }}"
 
     - name: Include roles
-      include_role:
+      ansible.builtin.include_role:
         name: "{{ item }}"
       with_items:
         - update
@@ -38,6 +38,7 @@
         - dunst
         - tmux
         - ultimate-plumber
+        - sipcalc
         - dotfiles
         - virtualenv
         - protonvpn
