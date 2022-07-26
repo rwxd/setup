@@ -3,6 +3,6 @@
   ansible.builtin.package:
     name:
       - bitwarden
-      - bitwarden-cli
+      # - bitwarden-cli
     state: present
   become: true

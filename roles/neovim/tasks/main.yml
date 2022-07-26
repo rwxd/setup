@@ -4,7 +4,6 @@
     name:
       - neovim
       - nodejs
-      - yarn
       - npm
       - fzf
       - ripgrep
