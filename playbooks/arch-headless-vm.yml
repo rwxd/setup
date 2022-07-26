@@ -21,7 +21,7 @@
         - system-tools
         - aur
         - zsh
-        - subuid_subguid
+        - subuid_subgid
         - neovim
         - tmux
         - dotfiles
