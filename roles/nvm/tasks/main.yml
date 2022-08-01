@@ -1,0 +1,6 @@
+---
+- name: Install nvm
+  ansible.builtin.package:
+    name: nvm
+    state: present
+  become: true
