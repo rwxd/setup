@@ -19,6 +19,14 @@
     shell: "/bin/zsh"
   become: true
 
+- name: Create zsh config directory
+  ansible.builtin.file:
+    path: ~/.zsh/
+    state: directory
+    mode: 0750
+    owner: "{{ whoami.stdout }}"
+    group: "{{ whoami.stdout }}"
+
 - name: Get oh-my-zsh
   git:
     repo: https://github.com/ohmyzsh/ohmyzsh.git
