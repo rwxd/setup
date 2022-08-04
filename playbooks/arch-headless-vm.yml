@@ -43,4 +43,4 @@
         - ultimate-plumber
         - pipenv
         - nvm
-        # - kind
+        - rust

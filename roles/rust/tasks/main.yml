@@ -1,0 +1,8 @@
+---
+- name: Install rustup & other tools
+  ansible.builtin.package:
+    name:
+      - rustup
+      - cargo-crev
+    state: present
+  become: true
