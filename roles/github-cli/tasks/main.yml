@@ -1,0 +1,6 @@
+---
+- name: Install github-cli
+  ansible.builtin.package:
+    name: github-cli
+    state: present
+  become: true

@@ -44,3 +44,5 @@
         - pipenv
         - nvm
         - rust
+        - glab
+        - github-cli

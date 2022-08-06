@@ -1,0 +1,6 @@
+---
+- name: Install glab
+  ansible.builtin.package:
+    name: glab
+    state: present
+  become: true

@@ -91,3 +91,5 @@
         - shellcheck
         - cryptomator
         - rust
+        - github-cli
+        - glab
