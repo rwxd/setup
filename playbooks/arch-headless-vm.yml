@@ -39,6 +39,8 @@
         - helm
         - pwgen
         - git-crypt
+        - shellcheck
+        - shfmt
         - hadolint
         - ultimate-plumber
         - pipenv
