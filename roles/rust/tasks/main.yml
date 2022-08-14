@@ -4,5 +4,6 @@
     name:
       - rustup
       - cargo-crev
+      - cargo-watch
     state: present
   become: true
