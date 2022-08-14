@@ -1,0 +1,6 @@
+---
+- name: Install nnn
+  ansible.builtin.package:
+    name: nnn
+    state: present
+  become: true

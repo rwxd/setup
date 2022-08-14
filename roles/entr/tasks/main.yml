@@ -1,0 +1,6 @@
+---
+- name: Install entr
+  ansible.builtin.package:
+    name: entr
+    state: present
+  become: true

@@ -49,3 +49,5 @@
         - glab
         - github-cli
         - btop
+        - entr
+        - nnn
