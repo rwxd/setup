@@ -1,0 +1,6 @@
+---
+- name: Install tcpdump
+  ansible.builtin.package:
+    name: tcpdump
+    state: present
+  become: true
