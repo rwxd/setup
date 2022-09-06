@@ -1,0 +1,6 @@
+---
+- name: Install qtpass
+  ansible.builtin.package:
+    name: qtpass
+    state: present
+  become: true
