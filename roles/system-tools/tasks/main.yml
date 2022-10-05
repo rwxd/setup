@@ -11,6 +11,7 @@
       - sshpass
       - gnupg
       - net-tools
+      - traceroute
     state: present
   become: true
 
