@@ -15,9 +15,9 @@
 
 - name: Install block
   when: >
-    (update_containerlab
+    containerlab_installed.rc != 0
+    or (update_containerlab
     and containerlab_version_output.stdout != containerlab_version)
-    or containerlab_installed.rc != 0
   block:
     - name: Get containerlab archive
       ansible.builtin.get_url:
