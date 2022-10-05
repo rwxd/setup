@@ -1,58 +1,17 @@
 ---
-- name: Get latest containerlab version
-  shell: >
-    curl -s https://github.com/srl-labs/containerlab/releases/latest | sed -e 's/.*tag\/v\(.*\)\".*/\1/'
-  register: containerlab_github_version_output
-  changed_when: false
-
-- name: Check if containerlab is installed
-  shell: "which containerlab"
-  register: containerlab_installed
-  ignore_errors: true
-  changed_when: false
-
-- name: Get current containerlab version
-  shell: >
-    containerlab version | grep "version:" | grep -Po "\d+\.\d+\.\d+"
-  register: containerlab_version_output
-  when: containerlab_installed.rc == 0
-  changed_when: false
-
-- name: Set new containerlab version fact
-  set_fact:
-    new_containerlab_version: "{{ containerlab_github_version_output.stdout }}"
-
-- name: Set current containerlab version fact
-  set_fact:
-    current_containerlab_version: "{{ containerlab_version_output.stdout }}"
-  when: containerlab_installed.rc == 0
-
-- name: Set update containerlab
-  set_fact:
-    update_containerlab: true
-  when: >
-    containerlab_installed.rc != 0
-    or new_containerlab_version != current_containerlab_version
-
-- name: Set do not update containerlab
-  set_fact:
-    update_containerlab: false
-  when: >
-    containerlab_installed.rc == 0
-    and new_containerlab_version == current_containerlab_version
-
 - name: Install block
   when: update_containerlab
   block:
     - name: Get containerlab archive
       get_url:
-        url: "https://github.com/srl-labs/containerlab/releases/download/v{{ new_containerlab_version }}/containerlab_{{ new_containerlab_version }}_Linux_amd64.tar.gz"
+        url: "https://github.com/srl-labs/containerlab/releases/download/{{ containerlab_version }}/containerlab_{{ containerlab_version | replace('v', '') }}_Linux_amd64.tar.gz"
         dest: /tmp/containerlab.tar.gz
 
     - name: Create containerlab temp dir
-      file:
+      ansible.builtin.file:
         path: /tmp/containerlab
         state: directory
+        mode: 0700
 
     - name: Extract containerlab
       ansible.builtin.unarchive:
