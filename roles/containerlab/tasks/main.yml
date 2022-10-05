@@ -1,11 +1,29 @@
 ---
+- name: Check if containerlab is installed
+  ansible.builtin.command: "which containerlab"
+  register: containerlab_installed
+  changed_when: false
+  ignore_errors: true
+
+- name: Get current containerlab version
+  ansible.builtin.shell: |
+    set -e -o pipefail
+    containerlab version | grep "version" | sed -s 's/version\:\ //g' | xargs
+  register: containerlab_version_output
+  changed_when: false
+  when: containerlab_installed.rc == 0
+
 - name: Install block
-  when: update_containerlab
+  when: >
+    (update_containerlab
+    and containerlab_version_output.stdout != containerlab_version)
+    or containerlab_installed.rc != 0
   block:
     - name: Get containerlab archive
-      get_url:
-        url: "https://github.com/srl-labs/containerlab/releases/download/{{ containerlab_version }}/containerlab_{{ containerlab_version | replace('v', '') }}_Linux_amd64.tar.gz"
+      ansible.builtin.get_url:
+        url: "https://github.com/srl-labs/containerlab/releases/download/v{{ containerlab_version }}/containerlab_{{ containerlab_version }}_Linux_amd64.tar.gz"
         dest: /tmp/containerlab.tar.gz
+        mode: 0700
 
     - name: Create containerlab temp dir
       ansible.builtin.file:
@@ -26,3 +44,13 @@
         remote_src: true
         mode: "0755"
       become: true
+  always:
+    - name: Remove downloaded archive
+      ansible.builtin.file:
+        path: /tmp/containerlab.tar.gz
+        state: absent
+
+    - name: Remove created temp dir
+      ansible.builtin.file:
+        path: /tmp/containerlab
+        state: absent

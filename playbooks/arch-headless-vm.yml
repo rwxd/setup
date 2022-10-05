@@ -22,11 +22,11 @@
         - aur
         - zsh
         - subuid_subgid
+        - containerlab
         - neovim
         - tmux
         - dotfiles
         - virtualenv
-        - containerlab
         - tldr
         - bat
         - sipcalc
