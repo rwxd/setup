@@ -55,4 +55,4 @@
         - pipx
         - tcpdump
         - qtpass
-        - pip-tools
+        # - pip-tools
