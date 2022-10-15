@@ -4,3 +4,17 @@
     name: nix
     state: present
   become: true
+
+- name: Enable & start nix service
+  ansible.builtin.systemd:
+    name: nix-daemon.service
+    state: started
+    enabled: true
+  become: true
+
+- name: Add myself to nix-users group
+  ansible.builtin.user:
+    append: true
+    groups: nix-users
+    name: "{{ ansible_env['USER'] }}"
+  become: true
