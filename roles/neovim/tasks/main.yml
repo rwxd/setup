@@ -23,6 +23,7 @@
     cmd: whoami
   register: username_on_the_host
   delegate_to: localhost
+  changed_when: false
   when: username_on_the_host is not defined
   become: false
 
@@ -49,3 +50,8 @@
   with_items:
     - "~/.venvs/neovim2/"
     - "~/.venvs/neovim3/"
+
+- name: Create debugpy venv
+  ansible.builtin.pip:
+    name: debugpy
+    virtualenv: "~/.venvs/debugpy"

@@ -1,0 +1,5 @@
+---
+- name: Install pip-tools
+  community.general.pipx:
+    name: pip-tools
+    state: latest

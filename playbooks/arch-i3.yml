@@ -99,3 +99,4 @@
         - pipx
         - tcpdump
         - qtpass
+        - pip-tools

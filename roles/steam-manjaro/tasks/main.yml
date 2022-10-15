@@ -1,6 +1,6 @@
 ---
 - name: Install steam-manjaro
   ansible.builtin.package:
-    name: steam-manjaro
+    name: steam
     state: present
   become: true
